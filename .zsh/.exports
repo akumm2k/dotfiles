@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+# Add personal scripts to path
+export PATH="$PATH:$HOME/.scripts"

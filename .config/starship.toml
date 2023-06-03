@@ -1,0 +1,7 @@
+# don't insert blank lines between prompts
+add_newline = false
+
+[python]
+# see: https://starship.rs/config/#python
+# Configures the python binaries that Starship should executes when getting the ${version}.
+python_binary = ['python', 'python3']

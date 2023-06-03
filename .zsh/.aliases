@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+
+# shorten cmds
+alias py='python3'
+alias pl='swipl'
+
+# shorten cmd and turn on warning by default for c compilation
+alias c99='cc -std=c99 -Wall'
+
+# turn on warning by default for c++ compilation
+alias g++='g++ -W'
+
+# alwasy double check what's to be removed
+alias rm='rm -i'
+
+# uplift yourself
+alias saywhat='fortune | cowsay'
+
+# bare git repository for dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
