@@ -1,0 +1,107 @@
+// Backup VS Code settings
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.associations": {
+        "*.Rmd": "rmd"
+    },
+
+    // R props
+    "r.rpath.mac": "/Library/Frameworks/R.framework/Resources/bin/R",
+    "r.terminalPath": "/Library/Frameworks/R.framework/Resources/bin/R",
+    "r.rterm.mac": "/usr/local/bin/radian",
+    "r.rterm.option": [],
+    "r.bracketedPaste": true,
+    "terminal.integrated.env.osx" : {
+        "R.HOME": "/Library/Frameworks/R.framework/Resources"
+    },
+    "r.rmarkdown.knit.defaults.knitWorkingDirectory": "workspace root",
+    "r.plot.defaults.colorTheme": "vscode",
+    "r.plot.useHttpgd": true,
+
+    // VS Code props
+    "workbench.colorTheme": "One Dark Darker",
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.fontFamily": "CodeNewRoman Nerd Font Mono",
+
+    // following symlinks leads to rg (ripGrep) destroying the CPU
+    // see: https://github.com/microsoft/vscode/issues/124230
+    "search.followSymlinks": false,
+
+    // markdown props
+    "markdown.marp.enableHtml": true,
+    "markdown-preview-github-styles.colorTheme": "dark",
+
+    // haskell props
+    "haskell.plugin.hlint.diagnosticsOn": false,
+    "haskell.manageHLS": "PATH",
+
+    // Pddl props
+    "pddlPlanner.executionTarget": "Terminal",
+
+    // Python DocString props
+    "autoDocstring.includeExtendedSummary": true,
+    "autoDocstring.includeName": true,
+    "autoDocstring.docstringFormat": "sphinx-notypes",
+
+    // VS Code liveserver props
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+
+    // Tech specific props
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+    },
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 70,
+    },
+    "black-formatter.args": [
+        "--line-length=70",
+    ],
+
+    "[latex]": {
+        "editor.wordWrap": "on",
+        "editor.formatOnSave": true,
+        "editor.wordWrapColumn": 70,
+    },
+
+    // editor props
+    "files.trimTrailingWhitespace": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+    },
+
+    // work-around for python import sort on save
+    "multiCommand.commands": [
+        {
+          "command": "multiCommand.saveFileAndSortImportsWhenPython",
+          "sequence": [
+            "python.sortImports",
+            "workbench.action.files.save"
+          ]
+        }
+    ],
+
+    // Jupyter notebook props
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "jupyter.themeMatplotlibPlots": true,
+    "notebook.output.textLineLimit": 120,
+
+    // oracle props
+    "oracledevtools.bookmarkFileFolder": "${userHome}/Oracle/oracle.oracledevtools",
+    "oracledevtools.download.otherFolder": "${userHome}/downloads",
+    "oracledevtools.connectionConfiguration.configFilesFolder": "${userHome}/Oracle/network/admin",
+    "oracledevtools.connectionConfiguration.walletFileFolder": "${userHome}/Oracle/network/admin",
+    "oracledevtools.connections": [],
+}
