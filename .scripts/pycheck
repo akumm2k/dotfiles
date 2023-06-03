@@ -1,0 +1,11 @@
+#!/bin/bash
+
+file="$1"
+
+# linting
+pylama "$file"
+pylint "$file"
+flake8 "$file"
+
+# static code analysis
+mypy --namespace-packages --ignore-missing-imports "$file"

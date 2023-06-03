@@ -1,0 +1,10 @@
+#/bin/bash
+
+# Get the IP address of the current machine
+ip="$( ifconfig | egrep -w inet | cut -f 2 -d " " | tail -n 1 )"
+
+# Get the username of the current user
+host="$( whoami )"
+
+echo "$host@$ip"
+

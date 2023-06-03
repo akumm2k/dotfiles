@@ -1,0 +1,35 @@
+#!/bin/bash
+# renders thesis on my linux machine, with a less effed up Latexmk than on my mac
+
+# Parse command line options
+make=false
+files=()
+
+while getopts "mv" opt; do
+  case "$opt" in
+    m) make=true ;;
+    v) verbose=true ;;
+    *) echo "Invalid option: -$OPTARG" >&2
+       exit 1 ;;
+  esac
+done
+shift $((OPTIND-1))
+
+# Set files to the parameters that don't start with a dash
+for arg in "$@"; do
+  # Check if the argument is not an option
+  if [[ $arg != -* ]]; then
+    # Collect non-option arguments in the 'files' array
+    files+=("$arg")
+  fi
+done
+
+# Copy files to remote machine
+[[ "$verbose" ]] && echo "Running scp ${files[@]} aryanfedora:~/Desktop/vote-rigging/thesis/"
+scp "${files[@]}" aryanfedora:~/Desktop/vote-rigging/thesis/
+
+# Run make if the -m option was provided
+if [ "$make" = true ]; then
+  [[ "$verbose" ]] && echo "Making"
+  ssh aryanfedora 'cd ~/Desktop/vote-rigging/thesis/ && make > make_output.txt'
+fi

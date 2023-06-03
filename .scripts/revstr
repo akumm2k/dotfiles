@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# reverse a string argument
+rev <<< "$1"

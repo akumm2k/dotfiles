@@ -1,0 +1,17 @@
+#!/bin/zsh
+# run C programs quickly
+
+del_f='y'
+if [[ $2 == "-n" ]]; then
+  # Set a flag indicating that the executable should not be deleted
+  DELETE=false
+else
+  # Set the flag to indicate that the executable should be deleted
+  DELETE=true
+fi
+
+fname="${1%.*}"
+echo "running $fname"
+c99 "$1" -o "$fname" && "./$fname"
+
+[[ $DELETE == true ]] && rm -rf "${fname}" || exit 0

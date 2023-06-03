@@ -1,0 +1,22 @@
+#!/bin/bash
+# restrict the file width
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $0 <file> [<line-width>]"
+  exit 1
+fi
+
+file=$1
+
+if [[ ! -f "$file" ]]; then
+  echo "Error: $file is not a file or doesn't exist."
+  exit 1
+fi
+
+if [[ $# -lt 2 ]]; then
+  line_width=70
+else
+  line_width=$2
+fi
+
+fold -sw "$line_width" "$file" > "$file.tmp" && mv "$file.tmp" "$file"
