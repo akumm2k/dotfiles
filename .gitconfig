@@ -1,0 +1,26 @@
+[init]
+	# Set the default branch to 'main'
+	defaultBranch = main
+
+[user]
+	name = akumm2k
+	email = 82381989+akumm2k@users.noreply.github.com
+
+[color]
+	# Use color when output is written to the terminal
+	ui = auto
+
+[merge]
+	# Use diff3 merge conflict style
+	conflictstyle = diff3
+
+[core]
+	editor = code --wait
+
+[alias]
+	# Shorten commonly used commands
+	sla = log --oneline --decorate --graph --all
+	p = push
+	st = status
+	ll = log --oneline
+	cm = commit -m
