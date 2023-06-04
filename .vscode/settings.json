@@ -81,6 +81,10 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
     },
+    "editor.lineNumbers": "relative",
+
+    // Use .vimrc key mappings with vim plugin
+    "vim.vimrc.enable": true,
 
     // work-around for python import sort on save
     "multiCommand.commands": [
