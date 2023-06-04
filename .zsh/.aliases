@@ -22,3 +22,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # use bat as cat
 ## see: https://github.com/sharkdp/bat
 alias cat='bat'
+
+# copy vscode settings to dotfiles
+## The ignored part must be inside
+## `<-- Private start ... Private end -->`
+## which is case sensitive
+alias bkp_vs_code_settings="sed '/<-- Private start/,/Private end -->/d' ~/Library/Application\ Support/Code/User/settings.json > $HOME/.vscode/settings.json"

@@ -1,4 +1,3 @@
-// Backup VS Code settings
 {
     "diffEditor.ignoreTrimWhitespace": false,
     "files.associations": {
@@ -107,5 +106,5 @@
     "oracledevtools.download.otherFolder": "${userHome}/downloads",
     "oracledevtools.connectionConfiguration.configFilesFolder": "${userHome}/Oracle/network/admin",
     "oracledevtools.connectionConfiguration.walletFileFolder": "${userHome}/Oracle/network/admin",
-    "oracledevtools.connections": [],
+
 }
