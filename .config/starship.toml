@@ -3,5 +3,5 @@ add_newline = false
 
 [python]
 # see: https://starship.rs/config/#python
-# Configures the python binaries that Starship should executes when getting the ${version}.
+# Configures the python binaries that Starship should execute when getting the ${version}.
 python_binary = ['python', 'python3']
