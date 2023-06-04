@@ -18,3 +18,7 @@ alias saywhat='fortune | cowsay'
 
 # bare git repository for dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# use bat as cat
+## see: https://github.com/sharkdp/bat
+alias cat='bat'

@@ -2,3 +2,7 @@
 
 # Add personal scripts to path
 export PATH="$PATH:$HOME/.scripts"
+
+# bat (cat with syntax highlighting) default styles
+export BAT_THEME='OneHalfDark'
+export BAT_STYLE='plain,header'
