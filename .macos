@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+# enable press and hold for VS Code for navigation in its Vim plugin
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
