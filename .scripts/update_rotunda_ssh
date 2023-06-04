@@ -1,15 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # The ssh to a rotunda machine sometimes crashes
 # so replace the host config with another machine
 
 SSH_FILE="${HOME}/.ssh/config"
 
 # Regular expression pattern to match the hostname in the SSH configuration file
-reg='(Hostname u-pl1)([0-9][0-9]?)(\.ms\.mff\.cuni\.cz)'
+reg='(HostName u-pl)([0-9][0-9]?)(\.ms\.mff\.cuni\.cz)'
 
 # Extract the current u-pl number from the SSH configuration file
-upl_no="$( cat ${SSH_FILE} | egrep -o "${reg}"  | sed -E "s/${reg}/\2/" )"
-new_no=$(( ($upl_no + 1) % 24 ))
+upl_no="$( grep -Eo "${reg}" "${SSH_FILE}" | sed -E "s/${reg}/\2/" )"
+new_no=$(( (upl_no + 1) % 24 ))
 
 # Update the SSH configuration file with the new u-pl number with a backup
 sed -E -i.bu "s/${reg}/\1${new_no}\3/" "$SSH_FILE"

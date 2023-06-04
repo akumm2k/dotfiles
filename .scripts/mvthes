@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # renders thesis on my linux machine, with a less effed up Latexmk than on my mac
 
 # Parse command line options
@@ -25,7 +25,7 @@ for arg in "$@"; do
 done
 
 # Copy files to remote machine
-[[ "$verbose" ]] && echo "Running scp ${files[@]} aryanfedora:~/Desktop/vote-rigging/thesis/"
+[[ "$verbose" ]] && echo "Running scp" "${files[@]}" "aryanfedora:~/Desktop/vote-rigging/thesis/"
 scp "${files[@]}" aryanfedora:~/Desktop/vote-rigging/thesis/
 
 # Run make if the -m option was provided

@@ -1,7 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 # run C programs quickly
 
-del_f='y'
 if [[ $2 == "-n" ]]; then
   # Set a flag indicating that the executable should not be deleted
   DELETE=false

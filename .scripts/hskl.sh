@@ -1,15 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 hsk_file=$1
 all_args=("$@")
 rest_args=("${all_args[@]:1}")
 
-# Check if the "-v" flag is present in the arguments
+# Flags
 verbose=false
-if [[ " ${all_args[@]} " =~ " -v " ]]; then
-    verbose=true
-fi
+delete=false
 
+# Process flags
+for arg in "${all_args[@]}"; do
+    case $arg in
+        -v) verbose=true ;;
+        -d) delete=true ;;
+    esac
+done
 
 # Check if a Haskell file argument is provided
 if [ -n "$hsk_file" ]; then
@@ -24,12 +29,10 @@ if [ -n "$hsk_file" ]; then
 
     ./"$file_name" "${rest_args[@]}"
 
-    # Check if the "-d" flag is present in the arguments
-    if [[ " ${all_args[@]} " =~ " -d " ]]; then
-        # Remove the executable and compilation files
+    # Remove files based on flags
+    if $delete; then
         rm -rf "$file_name" "./*.hi" "./*.o"
     else
-        # Remove only the compilation files
         rm -rf "./*.hi" "./*.o"
     fi
 else

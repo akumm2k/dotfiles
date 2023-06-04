@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # restrict the file width
 
 if [[ $# -lt 1 ]]; then

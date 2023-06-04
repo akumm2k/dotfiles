@@ -27,4 +27,4 @@ alias cat='bat'
 ## The ignored part must be inside
 ## `<-- Private start ... Private end -->`
 ## which is case sensitive
-alias bkp_vs_code_settings="sed '/<-- Private start/,/Private end -->/d' ~/Library/Application\ Support/Code/User/settings.json > $HOME/.vscode/settings.json"
+alias bkp_vs_code_settings='sed "/<-- Private start/,/Private end -->/d" ~/Library/Application\ Support/Code/User/settings.json > $HOME/.vscode/settings.json'
