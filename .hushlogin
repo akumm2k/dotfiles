@@ -1,6 +1,6 @@
-# Adding this file to $HOME turns off the login banner upon
-# firing up the terminal. The banner involves, among other things
-# login date and time, system copyright notice, and
-# message of the day (motd). The motd can sometimes contains
-# important info such as system maintenance, security updates,
-# etc. So we may add `cat /etc/motd` to the rc file.
+# Adding this file to $HOME turns off the login banner upon firing up
+# the terminal. The banner involves, among other things, login date
+# and time, system copyright notice, and message of the day (motd).
+# The motd can sometimes contain important info such as system
+# maintenance, security updates, etc. So we may add `cat /etc/motd` to
+# the rc file.
