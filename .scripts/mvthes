@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
 # renders thesis on my linux machine, with a less effed up Latexmk than on my mac
 
 # Parse command line options

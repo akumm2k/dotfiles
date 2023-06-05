@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
 # run C programs quickly
 
 if [[ $2 == "-n" ]]; then

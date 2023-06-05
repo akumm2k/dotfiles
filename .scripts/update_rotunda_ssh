@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
 # The ssh to a rotunda machine sometimes crashes
 # so replace the host config with another machine
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 hsk_file=$1
 all_args=("$@")

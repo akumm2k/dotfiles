@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
 # restrict the file width
 
 if [[ $# -lt 1 ]]; then
