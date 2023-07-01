@@ -12,3 +12,6 @@ endfor
 
 " set tab width
 :set tabstop=4
+
+" turn on search highlight and incremental search
+:set hls is
