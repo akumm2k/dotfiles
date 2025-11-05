@@ -1,14 +1,11 @@
 #!/usr/bin/env zsh
 
 # Load zshrc subsets
-for file in .exports .private-exports .aliases; do
+for file in .exports .private-exports .aliases .zprofile; do
     # suppress shellcheck warning for sourcing non-constant path
     # shellcheck source=/dev/null
     [[ -e "$HOME/.zsh/$file" ]] && source "$HOME/.zsh/$file"
 done
-
-# Configure fuck alias
-eval "$(thefuck --alias)"
 
 # Initialize starship
 eval "$(starship init zsh)"
@@ -18,3 +15,8 @@ eval "$(starship init zsh)"
 if [[ -e "/etc/motd" ]]; then
     cat /etc/motd
 fi
+
+## NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
