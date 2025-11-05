@@ -1,8 +1,18 @@
 {
-    "diffEditor.ignoreTrimWhitespace": false,
-    "files.associations": {
-        "*.Rmd": "rmd"
+    // GitHub Copilot props
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
     },
+
+    // SQL Developer props
+    "sqldeveloper.telemetry.enabled": false,
+    "sqldeveloper.sqlHistory.historyLimit": 500,
+
+
 
     // R props
     "r.rpath.mac": "/Library/Frameworks/R.framework/Resources/bin/R",
@@ -16,10 +26,13 @@
     "r.rmarkdown.knit.defaults.knitWorkingDirectory": "workspace root",
     "r.plot.defaults.colorTheme": "vscode",
     "r.plot.useHttpgd": true,
+    "files.associations": {
+        "*.Rmd": "rmd"
+    },
 
     // VS Code props
     "workbench.colorTheme": "One Dark Darker",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
     "terminal.integrated.fontFamily": "CodeNewRoman Nerd Font Mono",
 
     // following symlinks leads to rg (ripGrep) destroying the CPU
@@ -32,7 +45,7 @@
 
     // haskell props
     "haskell.plugin.hlint.diagnosticsOn": false,
-    "haskell.manageHLS": "PATH",
+    "haskell.manageHLS": "GHCup",
 
     // Pddl props
     "pddlPlanner.executionTarget": "Terminal",
@@ -64,6 +77,7 @@
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 70,
     },
+    "python.analysis.typeCheckingMode": "standard",
     "black-formatter.args": [
         "--line-length=70",
     ],
@@ -73,6 +87,7 @@
         "editor.formatOnSave": true,
         "editor.wordWrapColumn": 70,
     },
+
 
     // editor props
     "files.trimTrailingWhitespace": true,
@@ -87,6 +102,8 @@
         // set linewidth ruler color
         "editorRuler.foreground": "#ff408032"
     },
+    "diffEditor.ignoreTrimWhitespace": false,
+
 
     // Use .vimrc key mappings with vim plugin
     "vim.vimrc.enable": true,
@@ -113,4 +130,5 @@
     "oracledevtools.download.otherFolder": "${userHome}/downloads",
     "oracledevtools.connectionConfiguration.configFilesFolder": "${userHome}/Oracle/network/admin",
     "oracledevtools.connectionConfiguration.walletFileFolder": "${userHome}/Oracle/network/admin",
+
 }
