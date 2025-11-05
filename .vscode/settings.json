@@ -78,9 +78,6 @@
         "editor.wordWrapColumn": 70,
     },
     "python.analysis.typeCheckingMode": "standard",
-    "black-formatter.args": [
-        "--line-length=70",
-    ],
 
     "[latex]": {
         "editor.wordWrap": "on",
