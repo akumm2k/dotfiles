@@ -55,11 +55,8 @@ fi
 # Copy the file
 cp "$FROM" "$TO"
 
-# Remove the private section
-sed -i.bak "\|$PRIVATE_START|,\|$PRIVATE_END|d" "$TO"
-
-# Check if sed succeeded
-if [[ $? -eq 0 ]]; then
+# Remove the private section and handle backup
+if sed -i.bak "\|$PRIVATE_START|,\|$PRIVATE_END|d" "$TO"; then
     # sed succeeded -> remove backup
     rm -f "$TO.bak"
 else
