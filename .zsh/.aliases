@@ -28,3 +28,9 @@ alias cat='bat'
 ## `<-- Private start ... Private end -->`
 ## which is case sensitive
 alias bkp_vs_code_settings='sed "/<-- Private start/,/Private end -->/d" ~/Library/Application\ Support/Code/User/settings.json > $HOME/.vscode/settings.json'
+
+
+# git alias
+alias ga='git add'
+alias gcam='git commit -am'
+alias gcm='git commit -m'
