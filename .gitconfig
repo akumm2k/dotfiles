@@ -25,3 +25,5 @@
 	ll = log --oneline
 	cm = commit -m
 	ct = commit
+	cam = commit -am
+
